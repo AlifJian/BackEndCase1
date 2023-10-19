@@ -31,13 +31,14 @@ class Order{
 
 // Class Cart
 class Cart{
-
+    //Membuat atribut-atribut class
     constructor(id,items,user){
         this.id = id;
         this.items = items;
         this.user = user;
     }
 
+    //Method untuk mendapatkan total harga dari semua order
     totalHarga(){
         let harga = 0;
         this.items.map( (item) => {
@@ -47,6 +48,7 @@ class Cart{
         return harga;
     }
 
+    //Method untuk menghapus orderan
     hapusBarang(id){
         try{
             this.items.map((item,i) => {
@@ -62,6 +64,7 @@ class Cart{
         }
     }
 
+    //Method untuk menambahkan orderan
     tambahBarang(item){
         try {
             if( item.length <= 0) {
